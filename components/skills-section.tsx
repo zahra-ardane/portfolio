@@ -33,9 +33,9 @@ export function SkillsSection() {
   const row2Ref = useRef(null)
   const row3Ref = useRef(null)
 
-  const row1InView = useInView(row1Ref, { once: true, amount: 0.3 })
-  const row2InView = useInView(row2Ref, { once: true, amount: 0.3 })
-  const row3InView = useInView(row3Ref, { once: true, amount: 0.3 })
+  const row1InView = useInView(row1Ref, { once: true, amount: 0.1 })
+  const row2InView = useInView(row2Ref, { once: true, amount: 0.1 })
+  const row3InView = useInView(row3Ref, { once: true, amount: 0.1 })
 
   const rowRefs = [row1Ref, row2Ref, row3Ref]
   const rowInViews = [row1InView, row2InView, row3InView]
@@ -58,26 +58,45 @@ export function SkillsSection() {
             const rowInView = rowInViews[rowIndex]
 
             return (
-              <div key={rowIndex} ref={rowRef} className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <motion.div 
+                key={rowIndex} 
+                ref={rowRef} 
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                initial={{ opacity: 0, y: 80 }}
+                animate={
+                  rowInView
+                    ? {
+                        opacity: 1,
+                        y: 0,
+                      }
+                    : { opacity: 0, y: 80 }
+                }
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 20,
+                  bounce: 0.3,
+                  delay: rowIndex * 0.2,
+                }}
+              >
                 {row.map((skill) => (
                   <motion.div
                     key={skill.name}
                     className="flex flex-col items-center justify-center p-6 bg-card/50 backdrop-blur-sm border border-border rounded-lg hover:border-primary transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ scale: 0.8 }}
                     animate={
                       rowInView
                         ? {
-                            opacity: 1,
-                            y: 0,
+                            scale: 1,
                           }
-                        : { opacity: 0, y: 100 }
+                        : { scale: 0.8 }
                     }
                     transition={{
-                      duration: 0.6,
                       type: "spring",
-                      stiffness: 100,
-                      damping: 10,
-                      bounce: 0.5,
+                      stiffness: 200,
+                      damping: 25,
+                      bounce: 0.2,
+                      delay: rowIndex * 0.2 + 0.1,
                     }}
                     whileHover={{ scale: 1.05, y: -5 }}
                   >
@@ -95,7 +114,7 @@ export function SkillsSection() {
                     </h3>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             )
           })}
         </div>

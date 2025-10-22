@@ -22,7 +22,7 @@ export function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
   const email = "zahraardane2001@gmail.com"
-  const phone = "+989123456789"
+  const phone = "+989337397763"
   const linkedinUrl = "https://linkedin.com/in/zahra-ardaneh"
   const githubUrl = "https://github.com/zahra-ardane"
 
@@ -146,7 +146,7 @@ export function ContactSection() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center pt-6"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -156,17 +156,17 @@ export function ContactSection() {
                 href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-card/50 border border-blue-500/30 rounded-lg hover:border-blue-500 hover:bg-card transition-all group"
+                className="flex items-center gap-4 p-4 bg-card/50 border border-[#0c66c2]/30 rounded-lg hover:border-[#0c66c2] hover:bg-card transition-all group"
                 whileHover={{ x: 5, scale: 1.02 }}
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
-                  <Linkedin className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 flex items-center justify-center bg-[#0c66c2]/20 rounded-lg group-hover:bg-[#0c66c2]/30 transition-colors">
+                  <Linkedin className="w-6 h-6 text-[#0c66c2]" />
                 </div>
                 <div className="flex-1">
-                  <div className="font-semibold text-foreground group-hover:text-blue-400 transition-colors">
+                  <div className="font-semibold text-foreground group-hover:text-[#0c66c2] transition-colors">
                     LinkedIn
                   </div>
-                  <div className="text-sm text-muted-foreground">Connect professionally</div>
+                  <div className="text-sm text-muted-foreground">https://www.linkedin.com/in/zahra-ardaneh/</div>
                 </div>
               </motion.a>
 
@@ -203,7 +203,7 @@ export function ContactSection() {
                   <div className="font-semibold text-foreground group-hover:text-[#D6A99D] transition-colors">
                     GitHub
                   </div>
-                  <div className="text-sm text-muted-foreground">View my code</div>
+                  <div className="text-sm text-muted-foreground">https://github.com/zahra-ardane</div>
                 </div>
               </motion.a>
 
