@@ -2,28 +2,35 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import Image from "next/image"
+import { Icon } from "@iconify/react"
 
 const skillRows = [
+  // Core Technologies
   [
-    { name: "JavaScript", logo: "/javascript-logo.png" },
-    { name: "TypeScript", logo: "/typescript-logo.png" },
-    { name: "Node.js", logo: "/nodejs-logo.png" },
-    { name: "Express", logo: "/generic-transport-logo.png" },
+    { name: "Node.js", icon: "simple-icons:nodedotjs", colorClass: "text-secondary" },
+    { name: "TypeScript", icon: "simple-icons:typescript", colorClass: "text-secondary" },
+    { name: "React.js", icon: "simple-icons:react", colorClass: "text-secondary" },
+    { name: "Next.js", icon: "simple-icons:nextdotjs", colorClass: "text-secondary" },
+    { name: "JavaScript", icon: "simple-icons:javascript", colorClass: "text-secondary" },
   ],
+  // Frameworks & Tools
   [
-    { name: "Next.js", logo: "/nextjs-logo.png" },
-    { name: "React", logo: "/react-logo.png" },
-    { name: "Tailwind CSS", logo: "/tailwind-css-logo.png" },
-    { name: "PostgreSQL", logo: "/postgresql-logo.png" },
+    { name: "Express.js", icon: "simple-icons:express", colorClass: "text-[#D6A99D]" },
+    { name: "MySQL", icon: "simple-icons:mysql", colorClass: "text-[#D6A99D]" },
+    { name: "Material UI", icon: "simple-icons:mui", colorClass: "text-[#D6A99D]" },
+    { name: "Git", icon: "simple-icons:git", colorClass: "text-[#D6A99D]" },
+    { name: "REST APIs", icon: "simple-icons:swagger", colorClass: "text-[#D6A99D]" },
   ],
+  // Concepts & Patterns
   [
-    { name: "MongoDB", logo: "/mongodb-logo.png" },
-    { name: "Git", logo: "/generic-transport-logo.png" },
-    { name: "Docker", logo: "/generic-transport-logo.png" },
-    { name: "REST APIs", logo: "/generic-transport-logo.png" },
+    { name: "JWT", icon: "simple-icons:jsonwebtokens", colorClass: "text-secondary" },
+    { name: "OOP", icon: "simple-icons:java", colorClass: "text-secondary" },
+    { name: "Data Structures", icon: "simple-icons:databricks", colorClass: "text-secondary" },
+    { name: "Clean Code", icon: "simple-icons:code", colorClass: "text-secondary" },
+    { name: "Design Patterns", icon: "simple-icons:pattern", colorClass: "text-secondary" },
   ],
 ]
+
 
 export function SkillsSection() {
   const ref = useRef(null)
@@ -61,7 +68,7 @@ export function SkillsSection() {
               <motion.div 
                 key={rowIndex} 
                 ref={rowRef} 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                className="grid grid-cols-2 md:grid-cols-5 gap-6"
                 initial={{ opacity: 0, y: 80 }}
                 animate={
                   rowInView
@@ -101,12 +108,11 @@ export function SkillsSection() {
                     whileHover={{ scale: 1.05, y: -5 }}
                   >
                     <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Image
-                        src={skill.logo || "/placeholder.svg"}
-                        alt={`${skill.name} logo`}
+                      <Icon
+                        icon={skill.icon}
                         width={64}
                         height={64}
-                        className="rounded-lg"
+                        className={`${skill.colorClass} group-hover:animate-pulse`}
                       />
                     </div>
                     <h3 className="text-center font-semibold group-hover:text-primary transition-colors">

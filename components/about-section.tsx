@@ -5,9 +5,9 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 const stats = [
-  { label: "Years Experience", value: "2+", color: "from-primary/20 to-primary/40" },
-  { label: "Projects Completed", value: "15+", color: "from-[#D6A99D]/30 to-[#D6A99D]/50" },
-  { label: "Technologies", value: "10+", color: "from-primary/20 to-primary/40" },
+  { label: "Years Experience", value: "3+", color: "from-primary/20 to-primary/40" },
+  { label: "Projects Completed", value: "20+", color: "from-[#D6A99D]/30 to-[#D6A99D]/50" },
+  { label: "Technologies", value: "15+", color: "from-primary/20 to-primary/40" },
 ]
 
 export function AboutSection() {
@@ -41,22 +41,23 @@ export function AboutSection() {
           </div>
 
           <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              I'm a passionate fullstack developer with a love for creating seamless, performant web experiences. My
-              journey in web development started with a curiosity about how things work under the hood, and has evolved
-              into a career focused on building elegant solutions to complex problems.
-            </p>
+          <p>
+            I believe great code should feel as good as it performs — clear, balanced, and quietly intelligent. 
+            There’s something deeply satisfying about building systems that run smoothly and read like they were always meant to work that way. 
+            For me, development isn’t just about functionality — it’s about crafting something that feels effortless to use and elegant to maintain.
+          </p>
 
-            <p>
-              I specialize in modern JavaScript frameworks and have a strong foundation in both frontend and backend
-              technologies. I believe in writing clean, maintainable code and staying up-to-date with the latest
-              industry trends and best practices.
-            </p>
+          <p>
+            Over the past few years, I’ve worked across the full stack, shaping everything from refined user interfaces to scalable backend systems. 
+            Each project has reinforced a simple truth: elegance in tech isn’t about cleverness — it’s about clarity, empathy, and thoughtful design. 
+            I care about writing code that tells a clear story and designing systems that make sense long after they’re shipped.
+          </p>
 
-            <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or
-              sharing knowledge with the developer community.
-            </p>
+          <p>
+            These days, I’m focused on creating reliable, modern web experiences with JavaScript and TypeScript — using Node.js, Next.js, MySQL, and Redis at the core. 
+            What drives me most is curiosity — the constant urge to dig deeper into architecture, scalability, and performance, and to make every build a little cleaner, faster, and smarter than the last.
+          </p>
+
           </div>
         </motion.div>
       </div>

@@ -129,7 +129,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Crafting elegant solutions with modern web technologies
+            Crafting code that feels as good as it works
           </motion.p>
 
           <motion.div
@@ -141,7 +141,7 @@ export function HeroSection() {
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 gap-2"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 gap-2 bg-[#D6A99D]"
             >
               <Rocket className="w-5 h-5" />
               Let's Connect

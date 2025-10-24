@@ -6,33 +6,41 @@ import { useRef } from "react"
 
 const experiences = [
   {
-    year: "2024",
-    title: "Started Learning Web Development",
+    year: "2022",
+    title: "Joined Team-X as Full-Stack Developer",
     description: [
-      "Began journey into fullstack development",
-      "Focused on modern JavaScript frameworks",
-      "Learned best practices and design patterns",
+      "Started shaping real-world products where reliability meets design. Quickly took ownership of key features and found a rhythm between front-end detail and back-end depth.",
+      "Learned how to build for users, not just for code — balancing clean architecture with practical delivery.",
+    ],
+  },
+  {
+    year: "2023",
+    title: "Building and Scaling with Purpose",
+    description: [
+      "Began leading major features from concept to production, translating complex ideas into simple, elegant solutions.",
+      "Worked across the full stack — refining APIs, optimizing performance, and shaping systems that scaled smoothly as products grew.",
     ],
   },
   {
     year: "2024",
-    title: "Built First Projects",
+    title: "Owning Craft and Collaboration",
     description: [
-      "Created personal projects with React and Next.js",
-      "Implemented backend APIs with Node.js",
-      "Deployed applications to production",
+      "Focused on technical clarity, maintainability, and shared standards across the team.",
+      "Helped guide architectural improvements and initiated team sessions to strengthen collaboration and code quality.",
     ],
   },
   {
     year: "2025",
-    title: "Expanding Skills",
+    title: "Mastering Impactful Systems",
     description: [
-      "Deepening knowledge in TypeScript",
-      "Working with PostgreSQL databases",
-      "Exploring advanced React patterns",
+      "Delivering features that just work — fast, reliable, and elegant — where every detail counts.",
+      "Building systems that anticipate user needs, scale seamlessly, and feel effortless to interact with.",
+      "Driven by curiosity and craft, constantly refining processes and solutions to make the next product even better."
     ],
-  },
+  }
+  
 ]
+
 
 export function ExperienceSection() {
   const ref = useRef(null)
@@ -78,7 +86,7 @@ export function ExperienceSection() {
                 <div
                   className={`md:w-1/2 pl-20 md:pl-0 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12"}`}
                 >
-                  <span className="text-2xl font-bold text-primary font-mono">{exp.year}</span>
+                  <span className="text-2xl font-bold font-mono text-[#D6A99D]">{exp.year}</span>
                 </div>
 
                 <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-4 border-background shadow-[0_0_15px_rgba(94,234,212,0.5)]" />
