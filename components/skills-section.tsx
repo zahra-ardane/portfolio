@@ -24,10 +24,10 @@ const skillRows = [
   // Concepts & Patterns
   [
     { name: "JWT", icon: "simple-icons:jsonwebtokens", colorClass: "text-secondary" },
-    { name: "OOP", icon: "simple-icons:java", colorClass: "text-secondary" },
+    { name: "OOP", icon: "meteor-icons:objects-column", colorClass: "text-secondary" },
     { name: "Data Structures", icon: "simple-icons:databricks", colorClass: "text-secondary" },
-    { name: "Clean Code", icon: "simple-icons:code", colorClass: "text-secondary" },
-    { name: "Design Patterns", icon: "simple-icons:pattern", colorClass: "text-secondary" },
+    { name: "Clean Code", icon: "streamline:code-analysis-remix", colorClass: "text-secondary" },
+    { name: "Design Patterns", icon: "simple-icons:blueprint", colorClass: "text-secondary" },
   ],
 ]
 
