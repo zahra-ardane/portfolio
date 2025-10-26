@@ -2,22 +2,13 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Code2, Server, Layers, Database, Plug, Zap } from "lucide-react"
+import { Code2, Server, Layers, Database, Plug, Zap, TrendingUp, Users, Shield, Rocket } from "lucide-react"
 
 const services = [
   {
-    title: "Frontend Development",
-    description: "Building responsive, interactive user interfaces with React, Next.js, and modern CSS frameworks",
-    icon: Code2,
-    color: "from-[#D6A99D]/20 to-[#D6A99D]/5",
-    borderColor: "border-[#D6A99D]/30 hover:border-[#D6A99D]",
-    iconBg: "bg-[#D6A99D]/20 group-hover:bg-[#D6A99D]/30",
-    iconColor: "text-[#D6A99D]",
-    textColor: "group-hover:text-[#D6A99D]",
-  },
-  {
-    title: "Backend Development",
-    description: "Creating robust APIs and server-side logic with Node.js, Express, and database integration",
+    title: "Scalable Backend Architecture",
+    description:
+      "I shape backend systems that stay calm under pressure — built on Node.js, TypeScript, and Express. Each layer is structured to grow, recover, and keep performing long after launch.",
     icon: Server,
     color: "from-primary/15 to-primary/5",
     borderColor: "border-primary/30 hover:border-primary",
@@ -26,9 +17,10 @@ const services = [
     textColor: "group-hover:text-primary",
   },
   {
-    title: "Full Stack Solutions",
-    description: "End-to-end web application development from concept to deployment",
-    icon: Layers,
+    title: "Database & API Design",
+    description:
+      "I design data layers that don’t just work — they flow~ With MySQL and Redis under the hood, my REST APIs stay fast, predictable, and a pleasure to extend or debug.",
+    icon: Database,
     color: "from-[#D6A99D]/20 to-[#D6A99D]/5",
     borderColor: "border-[#D6A99D]/30 hover:border-[#D6A99D]",
     iconBg: "bg-[#D6A99D]/20 group-hover:bg-[#D6A99D]/30",
@@ -36,9 +28,10 @@ const services = [
     textColor: "group-hover:text-[#D6A99D]",
   },
   {
-    title: "Database Design",
-    description: "Designing and implementing efficient database schemas with PostgreSQL and other SQL databases",
-    icon: Database,
+    title: "High-Impact Frontend Development",
+    description:
+      "React and Next.js are where I bring ideas to life — fast, responsive, and intentional. Every component serves a purpose; every screen feels considered, not crowded.",
+    icon: Code2,
     color: "from-primary/15 to-primary/5",
     borderColor: "border-primary/30 hover:border-primary",
     iconBg: "bg-primary/20 group-hover:bg-primary/30",
@@ -46,26 +39,42 @@ const services = [
     textColor: "group-hover:text-primary",
   },
   {
-    title: "API Integration",
-    description: "Integrating third-party services and building RESTful APIs for seamless data flow",
-    icon: Plug,
-    color: "from-[#D6A99D]/15 to-[#D6A99D]/5",
+    title: "UI/UX Engineering",
+    description:
+      "Interfaces should feel effortless. I focus on clean layouts, clear flows, and the tiny interactions that quietly make users stay longer — not think harder.",
+    icon: Users,
+    color: "from-[#D6A99D]/20 to-[#D6A99D]/5",
     borderColor: "border-[#D6A99D]/30 hover:border-[#D6A99D]",
     iconBg: "bg-[#D6A99D]/20 group-hover:bg-[#D6A99D]/30",
     iconColor: "text-[#D6A99D]",
     textColor: "group-hover:text-[#D6A99D]",
   },
   {
-    title: "Performance Optimization",
-    description: "Optimizing web applications for speed, SEO, and user experience",
-    icon: Zap,
+    title: "Testing & Reliability",
+    description:
+      "I build with safety nets — Mocha, Chai, and thoughtful test design that keeps releases steady and edge cases handled before they reach production.",
+    icon: Shield,
     color: "from-primary/15 to-primary/5",
     borderColor: "border-primary/30 hover:border-primary",
     iconBg: "bg-primary/20 group-hover:bg-primary/30",
     iconColor: "text-primary",
     textColor: "group-hover:text-primary",
   },
-]
+  {
+    title: "Collaboration & Leadership",
+    description:
+      "Good code is shared code. I value clear discussions, practical reviews, and helping a team move in rhythm — from the first commit to the final deploy.",
+    icon: Rocket,
+    color: "from-[#D6A99D]/15 to-[#D6A99D]/5",
+    borderColor: "border-[#D6A99D]/30 hover:border-[#D6A99D]",
+    iconBg: "bg-[#D6A99D]/20 group-hover:bg-[#D6A99D]/30",
+    iconColor: "text-[#D6A99D]",
+    textColor: "group-hover:text-[#D6A99D]",
+  },
+];
+
+
+
 
 export function ServicesSection() {
   const ref = useRef(null)
