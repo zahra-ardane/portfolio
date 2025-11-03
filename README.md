@@ -35,6 +35,8 @@ A personal portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind C
 └── styles
     └── globals.css
 
+```
+
 🧠 Highlights
 
 * Minimal, responsive design optimized for performance
