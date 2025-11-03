@@ -1,23 +1,34 @@
-# 🌐 Zahra Ardaneh — Portfolio
+<h1 align="center">🌐 Zahra Ardaneh — Portfolio</h1>
 
-> *"Turning complexity into clarity — one system at a time."*
+<p align="center"><em>"Crafting code that feels as good as it works"</em></p>
 
-A personal portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind CSS** — designed to reflect clean code, clear structure, and thoughtful design.
-
----
-
-## 🚀 Tech Stack
-
-- **Framework:** [Next.js](https://nextjs.org/)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Fonts:** Geist Sans & Geist Mono
-- **Deployment:** Vercel
-- **Analytics:** Vercel Analytics
+<p align="center">
+  <a href="https://zahraardaneh.com"><b>🌎 zahraardaneh.com</b></a> •
+  <a href="https://www.linkedin.com/in/zahra-ardaneh/">💼 LinkedIn</a>
+</p>
 
 ---
 
-## 🧩 Project Structure
+### ✨ Overview
+
+A personal portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS** — designed to reflect clean code, clear structure, and thoughtful design.
+
+---
+
+### 🚀 Tech Stack
+
+| Category | Tools |
+|-----------|-------|
+| **Framework** | [Next.js](https://nextjs.org/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Fonts** | Geist Sans & Geist Mono |
+| **Deployment** | [Vercel](https://vercel.com) |
+| **Analytics** | Vercel Analytics |
+
+---
+
+### 🧩 Project Structure
 
 ```bash
 .
@@ -29,40 +40,53 @@ A personal portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind C
 │   ├── sections     # About, Hero, Contact, etc.
 │   └── ui           # Reusable UI elements (Button, Input, etc.)
 ├── lib              # Utility functions
-├── public
-│   ├── icon         # Favicon and related assets
-│   └── og-image.png # Open Graph preview image
-└── styles
-    └── globals.css
+└── public
+   ├── icon          # Favicon and related assets
+   └── og-image.png  # Open Graph preview image
 
 ```
 
-🧠 Highlights
+### 🧠 Highlights
 
-* Minimal, responsive design optimized for performance
-* Custom dark/light theme with ThemeProvider
-* Modular section-based architecture
-* SEO & metadata configured for social sharing
-* Clean developer aesthetic with <ZA/> branding
+* ⚡ Minimal, responsive design optimized for performance
+* 🌓 Custom dark/light theme with ThemeProvider
+* 🧱 Modular section-based architecture
+* 🔍 SEO & metadata configured for social sharing
+* 💻 Clean developer aesthetic with <ZA/> branding
 
-⚙️ Setup
+### ⚙️ Setup
 
 Clone and install dependencies:
+
+```bash
 
 git clone https://github.com/zahraardaneh/portfolio.git
 cd portfolio
 pnpm install
 pnpm run dev
 
+```
 
 Visit → http://localhost:3000
 
 🖼️ Preview
+Loading !
+<p align="center"> <img src="./public/og-image.png" alt="Zahra Ardaneh Portfolio Preview" width="600"/> </p>
 
-📬 Contact
-zahraardaneh.com
-https://www.linkedin.com/in/zahra-ardaneh/
+### 📬 Contact
+<p align="center">
+  <a href="https://zahraardaneh.com">
+    <img src="https://img.shields.io/badge/Website-zahraardaneh.com-8B5CF6?style=for-the-badge"
+    alt="Website" />
+  </a>
+  <a href="https://www.linkedin.com/in/zahra-ardaneh/">
+    <img src="https://img.shields.io/badge/LinkedIn-Zahra%20Ardaneh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
+    alt="LinkedIn" />
+  </a>
+  <!-- <a href="mailto:contact@zahraardaneh.com">
+    <img src="https://img.shields.io/badge/Email-contact%40zahraardaneh.com-gray?style=for-the-badge"
+    alt="Email" />
+  </a> -->
+</p>
 
-
-
-© 2025 Zahra Ardaneh — All rights reserved.
+<p align="center">© 2025 Zahra Ardaneh — All rights reserved.</p>
