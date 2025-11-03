@@ -8,10 +8,37 @@ import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "Zahra Ardaneh | Fullstack Developer",
-  description: "Portfolio of Zahra Ardaneh, a Fullstack Developer specializing in modern web technologies",
-  generator: "v0.app",
-}
+  title: {
+    default: "Zahra Ardaneh | Full-Stack Developer",
+    template: "%s | Zahra Ardaneh",
+  },
+  description:
+    "Portfolio of Zahra Ardaneh, a Full-Stack Developer specializing in modern web technologies, clean architecture, and scalable system design.",
+  generator: "Next.js",
+  authors: [{ name: "Zahra Ardaneh", url: "https://zahraardaneh.com" }],
+  creator: "Zahra Ardaneh",
+  metadataBase: new URL("https://zahraardaneh.com"),
+  openGraph: {
+    title: "Zahra Ardaneh | Full-Stack Developer",
+    description:
+      "Explore Zahra Ardaneh’s portfolio — a showcase of thoughtful design, robust architecture, and clean, modern web engineering.",
+    url: "https://zahraardaneh.com",
+    siteName: "Zahra Ardaneh",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Zahra Ardaneh Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
