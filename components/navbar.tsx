@@ -3,9 +3,16 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { ThemeToggle } from "./theme-toggle"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +24,7 @@ export function Navbar() {
   }, [])
 
   const scrollToSection = (id: string) => {
+    setIsMobileMenuOpen(false)
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
@@ -59,23 +67,38 @@ export function Navbar() {
 
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
-          <motion.button
-            className="text-foreground"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("contact")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </motion.button>
+          <DropdownMenu open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <DropdownMenuTrigger asChild>
+              <motion.button
+                className="text-foreground"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Open menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </motion.button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48">
+              {["about", "experience", "skills", "services", "contact"].map((item) => (
+                <DropdownMenuItem
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className="cursor-pointer capitalize"
+                >
+                  {item}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </motion.nav>

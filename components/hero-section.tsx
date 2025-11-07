@@ -68,7 +68,8 @@ export function HeroSection() {
     }
 
     const handleResize = () => {
-      canvas.width = window.innerWidth
+      const width = Math.min(window.innerWidth, document.documentElement.clientWidth)
+      canvas.width = width
       canvas.height = window.innerHeight
     }
 
@@ -102,7 +103,7 @@ export function HeroSection() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden w-full max-w-full">
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 flex-1 flex items-center">
