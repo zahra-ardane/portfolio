@@ -70,8 +70,8 @@ pnpm run dev
 Visit → http://localhost:3000
 
 🖼️ Preview
-Loading !
-<p align="center"> <img src="./public/og-image.png" alt="Zahra Ardaneh Portfolio Preview" width="600"/> </p>
+
+<p align="center"> <img src="./public/og-image.jpeg" alt="Zahra Ardaneh Portfolio Preview" width="600"/> </p>
 
 ### 📬 Contact
 <p align="center">
